@@ -1,0 +1,25 @@
+# Build output
+dist/
+vendor/runtime/
+work/
+bin/
+obj/
+
+# User data
+Reports/
+*.json
+*.csv
+!package*.json
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Temporary files
+*.tmp
+*.partial
+*.log
+Thumbs.db
+.DS_Store

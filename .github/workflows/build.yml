@@ -1,0 +1,33 @@
+name: Build Windows x64
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "v*" ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch verified third-party dependencies
+        shell: pwsh
+        run: ./scripts/fetch-deps.ps1
+
+      - name: Build
+        shell: pwsh
+        run: ./build.ps1 -SkipDeps
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: HardwareMonitorCenter-v2.3-Windows-x64
+          path: dist/HardwareMonitorCenter-v2.3-Windows-x64.zip
+          if-no-files-found: error
