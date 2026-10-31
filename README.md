@@ -52,7 +52,7 @@
 
 ## 快速开始
 
-1. 从本仓库的 **Releases** 页面下载 `HardwareMonitorCenter-v2.3-Windows-x64.zip`。
+1. 从 [最新 Release](https://github.com/Monorths/hardware-monitoring-center/releases/latest) 下载 `HardwareMonitorCenter-v2.3-Windows-x64.zip`。
 2. 完整解压，不要直接在压缩包内运行。
 3. 双击 `HardwareMonitorCenter.exe`，允许 Windows 管理员权限请求。
 4. 首次运行按提示安装 PawnIO，完成后回到程序。
